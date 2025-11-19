@@ -16,6 +16,6 @@
     "type": "string",
     "options": ["text", "image"],
     "hint": "API返回数据的格式，可选值：text、image",
-    "default": "text"
+    "default": "image"
   }
 }
