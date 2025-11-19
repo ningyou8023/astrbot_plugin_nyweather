@@ -11,7 +11,7 @@
 
 ## 安装方法
 
-1. 将插件文件夹 `astrbot_plugin_weather` 放入 AstrBot 的插件目录
+1. 将插件文件夹 `astrbot_plugin_nyweather` 放入 AstrBot 的插件目录
 2. 安装依赖：
    ```bash
    pip install aiohttp
@@ -23,7 +23,7 @@
 ### 基本命令
 
 - `/天气 城市 [天数]` — 查询指定城市天气；不填或填 1 表示当天
-- `/weather 城市 [天数]` — 英文命令
+- `/nyweather 城市 [天数]` — 英文命令
 - `/天气帮助` — 显示帮助信息
 
 ### 示例

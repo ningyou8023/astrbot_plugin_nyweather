@@ -1,9 +1,9 @@
-name: astrbot_plugin_weather
+name: astrbot_plugin_nyweather
 desc: 天气查询插件，支持当天与多天预报，返回text/image。
 help: 
   【基础指令】
-  - /天气 城市 [天数] ：查询天气（/weather /天气查询 /查天气 等关键词也可触发）
+  - /天气 城市 [天数] ：查询天气（/nyweather /天气查询 /查天气 等关键词也可触发）
   - /天气帮助 ：显示使用说明
 version: v1.0.0
 author: 柠柚
-repo: https://github.com/ningyou8023/astrbot_plugin_weather
+repo: https://github.com/ningyou8023/astrbot_plugin_nyweather

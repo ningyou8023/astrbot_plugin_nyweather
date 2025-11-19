@@ -9,11 +9,11 @@ from astrbot.api import AstrBotConfig, logger
 from astrbot.api.event import AstrMessageEvent, filter
 from astrbot.api.star import Context, Star, register
 
-PLUGIN_DATA_DIR = Path("data", "plugins_data", "astrbot_weather")
+PLUGIN_DATA_DIR = Path("data", "plugins_data", "astrbot_nyweather")
 PLUGIN_DATA_DIR.mkdir(parents=True, exist_ok=True)
 
 @register(
-    "astrbot_weather",
+    "astrbot_nyweather",
     "柠柚",
     "天气查询插件，支持当天与多天预报，返回text/image",
     "1.0.0",
@@ -24,10 +24,10 @@ class WeatherPlugin(Star):
         self.config = config
         self.api_url = getattr(config, "api_url", "https://api.nycnm.cn/API/weather.php")
         self.api_key = getattr(config, "api_key", "")
-        self.default_format = getattr(config, "default_format", "text")
+        self.default_format = getattr(config, "default_format", "image")
         logger.info("天气查询插件初始化完成")
 
-    @filter.command("weather", alias={"天气", "天气查询", "查天气"})
+    @filter.command("nyweather", alias={"天气", "天气查询", "查天气"})
     async def query_weather(self, event: AstrMessageEvent):
         message_text = event.get_message_str()
         parts = message_text.strip().split()
@@ -72,7 +72,7 @@ class WeatherPlugin(Star):
             logger.error(f"查询天气时发生错误: {e}")
             yield event.plain_result(f"❌ 查询失败: {str(e)}")
 
-    @filter.command("help_weather", alias={"天气帮助"})
+    @filter.command("help_nyweather", alias={"天气帮助"})
     async def show_help(self, event: AstrMessageEvent):
         help_text = (
             "🧭 天气查询插件\n\n"
