@@ -1,0 +1,21 @@
+{
+  "api_url": {
+    "description": "API接口地址",
+    "type": "string",
+    "hint": "天气查询API的完整URL地址",
+    "default": "https://api.nycnm.cn/API/weather.php"
+  },
+  "api_key": {
+    "description": "API密钥",
+    "type": "string",
+    "hint": "访问API所需的密钥（如果需要）",
+    "default": ""
+  },
+  "default_format": {
+    "description": "默认返回格式",
+    "type": "string",
+    "options": ["text", "image"],
+    "hint": "API返回数据的格式，可选值：text、image",
+    "default": "text"
+  }
+}
