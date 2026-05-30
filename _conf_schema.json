@@ -3,7 +3,7 @@
     "description": "API接口地址",
     "type": "string",
     "hint": "天气查询API的完整URL地址",
-    "default": "https://api.nycnm.cn/API/weather.php"
+    "default": "https://api.nycnm.cn/api/v2/weather"
   },
   "api_key": {
     "description": "API密钥",

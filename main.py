@@ -16,13 +16,13 @@ PLUGIN_DATA_DIR.mkdir(parents=True, exist_ok=True)
     "astrbot_nyweather",
     "柠柚",
     "天气查询插件，支持当天与多天预报，返回text/image",
-    "1.0.0",
+    "1.0.1",
 )
 class WeatherPlugin(Star):
     def __init__(self, context: Context, config: AstrBotConfig):
         super().__init__(context)
         self.config = config
-        self.api_url = getattr(config, "api_url", "https://api.nycnm.cn/API/weather.php")
+        self.api_url = getattr(config, "api_url", "https://api.nycnm.cn/api/v2/weather")
         self.api_key = getattr(config, "api_key", "")
         self.default_format = getattr(config, "default_format", "image")
         logger.info("天气查询插件初始化完成")
