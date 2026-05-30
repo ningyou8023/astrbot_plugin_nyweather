@@ -37,13 +37,13 @@
 
 插件支持以下配置项（见 `_conf_schema.json`）：
 
-- `api_url`：API 接口地址（默认：`https://api.nycnm.cn/API/weather.php`）
+- `api_url`：API 接口地址（默认：`https://api.nycnm.cn/api/v2/weather`）
 - `api_key`：API 密钥（如果需要）
 - `default_format`：返回格式（`text`/`image`，默认：`text`）
 
 ## API 接口与参数
 
-- 基础地址：`https://api.nycnm.cn/API/weather.php`
+- 基础地址：`https://api.nycnm.cn/api/v2/weather`
 - 必填参数：
   - `query`：城市，如：`北京`
   - `format`：返回格式，`text`/`image`
@@ -55,9 +55,9 @@
 ### URL 拼接规则（关键说明）
 
 - 查询当天：不添加 `action` 和 `days`
-  - 示例：`https://api.nycnm.cn/API/weather.php?query=北京&format=text`
+  - 示例：`https://api.nycnm.cn/api/v2/weather?query=北京&format=text`
 - 查询多天：必须添加 `action=forecast`，并附加 `days`
-  - 示例：`https://api.nycnm.cn/API/weather.php?query=北京&format=image&action=forecast&days=5`
+  - 示例：`https://api.nycnm.cn/api/v2/weather?query=北京&format=image&action=forecast&days=5`
 
 ## 返回说明
 
